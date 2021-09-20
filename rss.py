@@ -43,7 +43,7 @@ def create_feed_checker(feed_url):
         entry = FEED.entries[0]
         if entry.id != db.get_link(feed_url).link:
                        # ↓ Edit this message as your needs.
-            message = f"**{entry.title}**\n```{entry.link}```"
+            message = f"/mirror@Mirdirbot {entry.link}"
             try:
                 app.send_message(log_channel, message)
                 if app2 is not None:
